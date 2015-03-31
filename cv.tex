@@ -8,10 +8,10 @@
 \usepackage{svg}
 
 \newcommand{\sectiontitle}[1]{\section*{\uppercase{#1}} \hrule \vspace{1em}}
-\newcommand{\formationentry}[4]{
+\newcommand{\formationentry}[4]{%
 	\noindent \textbf{#1} \hfill
-	\colorbox{black}{
-		\parbox[c][1em]{8em}{
+	\colorbox{black}{%
+		\parbox[c][1em]{8em}{%
 			\hfill \color{white} #2
 		}
 	} \par
@@ -19,10 +19,10 @@
 	\normalsize
 	\vspace{1em}
 }
-\newcommand{\experienceentry}[4]{
+\newcommand{\experienceentry}[4]{%
 	\noindent \textbf{#1} \hfill
-	\colorbox{black}{
-		\parbox[c][1em]{8em}{
+	\colorbox{black}{%
+		\parbox[c][1em]{8em}{%
 			\hfill \color{white} #2
 		}
 	} \par
@@ -31,24 +31,25 @@
 	\normalsize
 	\vspace{1em}
 }
-\newcommand{\contactentry}[2]{
+\newcommand{\contactentry}[2]{%
 	\parbox{\textwidth}{\hfill #2 \includesvg[height=1em]{#1}}
 }
-\newcommand{\languageentry}[2]{
+\newcommand{\languageentry}[2]{%
 	\parbox{\textwidth}{\hfill \textbf{#1}\hspace{1em}#2}
 }
 
-\newenvironment{aside}{
-\begin{minipage}[t]{\dimexpr0.25\textwidth}
-\begin{flushright}
-}{
-\end{flushright}
-\end{minipage}
+
+\newenvironment{aside}{%
+\begin{minipage}[t]{\dimexpr0.25\textwidth}%
+\begin{flushright}%
+}{%
+\end{flushright}%
+\end{minipage}%
 }
-\newenvironment{main}{
-\begin{minipage}[t]{\dimexpr0.75\textwidth-3.6em}
-}{
-\end{minipage}
+\newenvironment{main}{%
+\begin{minipage}[t]{\dimexpr0.75\textwidth-2em}%
+}{%
+\end{minipage}%
 }
 
 \begin{document}
@@ -147,9 +148,9 @@
 \raggedleft
 
 
-\end{aside}
-\hspace{1em} \vrule \hspace{1em}
-\begin{main}
+\end{aside}%
+\hspace{1em}\vrule\hspace{1em}%
+\begin{main}%
 \sectiontitle{Academic Formation}
 \formationentry{Bachelor in Computer Science}{2013 - now}{Federal University
 of Santa Catarina (UFSC)}
@@ -178,5 +179,5 @@ Phasellus bibendum tellus sed sapien nullam.}
 \sectiontitle{Additional Information}
 
 
-\end{main}
+\end{main}%
 \end{document}
