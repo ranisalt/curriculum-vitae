@@ -1,4 +1,4 @@
-LATEX=pdflatex
+LATEX=pdflatex --shell-escape
 PROJECT=cv
 
 all:: $(PROJECT).pdf
