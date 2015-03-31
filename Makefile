@@ -8,4 +8,4 @@ $(PROJECT).pdf:: $(PROJECT).tex
 	$(LATEX) $(PROJECT)
 
 clean::
-	$(RM) *.{aux,log,nav,out,pdf,snm,toc,vrb}
+	$(RM) *.{aux,log,nav,out,pdf{,_tex},snm,toc,vrb}
