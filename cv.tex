@@ -42,10 +42,13 @@
 \noindent
 \begin{minipage}[t]{\dimexpr0.25\textwidth}%
 \begin{flushright}%
+\let\oldsection\section
 \let\oldsubsection\subsection
+\renewcommand{\section}[1]{\oldsection*{##1}}
 \renewcommand{\subsection}[1]{\oldsubsection*{\small ##1}}
 }{%
 \let\subsection\oldsubsection
+\let\section\oldsection
 \end{flushright}%
 \end{minipage}%
 }
@@ -70,18 +73,18 @@
 \pagenumbering{gobble}
 
 \begin{aside}
-\section*{Contact}
+\section{Contact}
 \contactentry{email}{\href{mailto:ranisalt+cv@gmail.com}{ranisalt@gmail.com}}
 \contactentry{github}{\href{https://github.com/ranisalt}{ranisalt}}
 \contactentry{twitter}{\href{https://twitter.com/ranisalt}{ranisalt}}
 
 
-\section*{Languages}
+\section{Languages}
 \languageentry{Portuguese}{native}
 \languageentry{English}{fluent}
 
 
-\section*{Programming}
+\section{Programming}
 \center
 \subsection{some thousand lines}
 \begin{itemize*}
@@ -110,7 +113,7 @@
 \raggedleft
 
 
-\section*{Tools}
+\section{Tools}
 \center
 \subsection{databases}
 \begin{itemize*}
