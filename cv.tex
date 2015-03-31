@@ -7,7 +7,6 @@
 \usepackage[a4paper,margin=2cm]{geometry}
 \usepackage{svg}
 
-\newcommand{\sectiontitle}[1]{\section*{\uppercase{#1}} \hrule \vspace{1em}}
 \newcommand{\formationentry}[4]{%
 	\noindent \textbf{#1} \hfill
 	\colorbox{black}{%
@@ -53,7 +52,10 @@
 \newenvironment{main}{%
 \noindent
 \begin{minipage}[t]{\dimexpr0.75\textwidth-2em}%
+\let\oldsection\section
+\renewcommand{\section}[1]{\oldsection*{\uppercase{##1}} \hrule \vspace{1em}}
 }{%
+\let\section\oldsection
 \end{minipage}%
 }
 
@@ -156,7 +158,7 @@
 \end{aside}%
 \hspace{1em}\vrule\hspace{1em}%
 \begin{main}%
-\sectiontitle{Academic Formation}
+\section{Academic Formation}
 \formationentry{Bachelor in Computer Science}{2013 - now}{Federal University
 of Santa Catarina (UFSC)}
 
@@ -164,7 +166,7 @@ of Santa Catarina (UFSC)}
 Catarinense Institute (IFC)}
 
 
-\sectiontitle{Professional Experience}
+\section{Professional Experience}
 \experienceentry{Scholarship}{4/2014 - now}{Tutorial Education Program (PET) at
 UFSC}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a turpis
 nisi. Cras velit tortor, congue eget eleifend non, pellentesque ut eros.
@@ -178,10 +180,10 @@ Integer commodo arcu quis orci congue, eget suscipit nulla pulvinar.
 Phasellus bibendum tellus sed sapien nullam.}
 
 
-\sectiontitle{Skills and Interests}
+\section{Skills and Interests}
 
 
-\sectiontitle{Additional Information}
+\section{Additional Information}
 
 
 \end{main}%
