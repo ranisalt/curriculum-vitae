@@ -43,7 +43,10 @@
 \noindent
 \begin{minipage}[t]{\dimexpr0.25\textwidth}%
 \begin{flushright}%
+\let\oldsubsection\subsection
+\renewcommand{\subsection}[1]{\oldsubsection*{\small ##1}}
 }{%
+\let\subsection\oldsubsection
 \end{flushright}%
 \end{minipage}%
 }
@@ -78,14 +81,14 @@
 
 \section*{Programming}
 \center
-\subsection*{\small some thousand lines}
+\subsection{\small some thousand lines}
 \begin{itemize*}
 \item{Python}
 \item{PHP}
 \item{Shell}
 \end{itemize*}
 
-\subsection*{\small just a thousand lines}
+\subsection{\small just a thousand lines}
 \begin{itemize*}
 \item{C++}
 \item{Coffeescript}
@@ -93,7 +96,7 @@
 \item{Javascript}
 \end{itemize*}
 
-\subsection*{\small just started learning}
+\subsection{\small just started learning}
 \begin{itemize*}
 \item{Haskell}
 \item{\LaTeX}
@@ -107,7 +110,7 @@
 
 \section*{Tools}
 \center
-\subsection*{\small databases}
+\subsection{\small databases}
 \begin{itemize*}
 \item{MongoDB}
 \item{MySQL}
@@ -115,7 +118,7 @@
 \item{SQLite}
 \end{itemize*}
 
-\subsection*{\small frameworks}
+\subsection{\small frameworks}
 \begin{itemize*}
 \item{CodeIgniter}
 \item{Flask}
@@ -123,19 +126,19 @@
 \item{Rails}
 \end{itemize*}
 
-\subsection*{\small version control}
+\subsection{\small version control}
 \begin{itemize*}
 \item{Git}
 \item{Mercurial}
 \end{itemize*}
 
-\subsection*{\small web servers}
+\subsection{\small web servers}
 \begin{itemize*}
 \item{Nginx}
 \item{uWSGI}
 \end{itemize*}
 
-\subsection*{\small others}
+\subsection{\small others}
 \begin{itemize*}
 \item{artificial intelligence}
 \item{crawlers}
