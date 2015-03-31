@@ -3,6 +3,7 @@
 \usepackage{color}
 \usepackage[inline]{enumitem}
 \usepackage[a4paper,margin=1in]{geometry}
+\usepackage{svg}
 
 \newcommand{\sectiontitle}[1]{\section*{\uppercase{#1}}}
 \newcommand{\formationentry}[4]{
@@ -28,6 +29,9 @@
 	\noindent \hangindent=1.5em \hangafter=0 \small #4 \par
 	\normalsize
 	\vspace{1em}
+}
+\newcommand{\contactentry}[2]{
+	\parbox{\textwidth}{\hfill #2 \includesvg[height=1em]{#1}}
 }
 \newcommand{\languageentry}[2]{
 	\parbox{\textwidth}{\hfill \textbf{#1}\hspace{1em}#2}
