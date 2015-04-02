@@ -57,7 +57,7 @@
 \let\oldsection\section
 \let\oldsubsection\subsection
 \renewcommand{\section}[1]{\oldsection*{##1}}
-\renewcommand{\subsection}[1]{\oldsubsection*{\small ##1}}
+\renewcommand{\subsection}[1]{\oldsubsection*{\small ##1}\vspace{-0.5em}}
 }{%
 \let\subsection\oldsubsection
 \let\section\oldsection
@@ -68,7 +68,7 @@
 \noindent
 \begin{minipage}[t]{\dimexpr0.75\textwidth-2em}%
 \let\oldsection\section
-\renewcommand{\section}[1]{\oldsection*{\uppercase{##1}} \hrule \vspace{1em}}
+\renewcommand{\section}[1]{\oldsection*{\uppercase{##1}}\vspace{-0.5em}\hrule\vspace{1em}}
 }{%
 \let\section\oldsection
 \end{minipage}%
@@ -81,7 +81,7 @@
 
 \Huge \hfill \textbf{Ranieri Althoff}
 \normalsize \par
-\vspace{3em}
+\vspace{2em}
 \pagenumbering{gobble}
 
 \begin{aside}
