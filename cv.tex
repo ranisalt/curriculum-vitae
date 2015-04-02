@@ -54,15 +54,15 @@
 \newenvironment{aside}{%
 \noindent
 \begin{minipage}[t]{\dimexpr0.25\textwidth}%
-\begin{flushright}%
 \let\oldsection\section
 \let\oldsubsection\subsection
 \renewcommand{\section}[1]{\oldsection*{##1}}
 \renewcommand{\subsection}[1]{\oldsubsection*{\small ##1}\vspace{-0.5em}}
-}{%
+\begin{center}%
+}{%5
+\end{center}%
 \let\subsection\oldsubsection
 \let\section\oldsection
-\end{flushright}%
 \end{minipage}%
 }
 \newenvironment{main}{%
@@ -100,7 +100,6 @@
 
 
 \section{Programming}
-\center
 \subsection{some thousand lines}
 \begin{itemize*}
 \item{Python}
@@ -124,8 +123,6 @@
 \item{Prolog}
 \item{Ruby}
 \end{itemize*}
-
-\raggedleft
 
 
 \section{Tools}
