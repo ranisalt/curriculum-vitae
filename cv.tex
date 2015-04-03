@@ -11,6 +11,7 @@
 
 \def\emcolor{blue!25!black}
 \newcommand{\fgem}{\color{\emcolor}}% foreground emphasis
+\newcommand{\vsep}{\noindent\fgem\hspace{0.75em}\vrule\hspace{0.75em}}
 
 \newcommand{\contactentry}[2]{%
 	\parbox{\textwidth}{\hfill #2 \includesvg[height=1em]{#1}\hspace{1em}\null}
@@ -183,7 +184,7 @@
 
 
 \end{aside}%
-\hspace{0.75em}\vrule\hspace{0.75em}%
+\vsep%
 \begin{main}%
 \section{Academic Formation}
 \formationentry{Bachelor in Computer Science}{2013 - now}{Federal University
