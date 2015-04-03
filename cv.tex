@@ -9,6 +9,9 @@
 \usepackage{svg}
 \usepackage{txfonts}
 
+\def\emcolor{blue!25!black}
+\newcommand{\fgem}{\color{\emcolor}}% foreground emphasis
+
 \newcommand{\contactentry}[2]{%
 	\parbox{\textwidth}{\hfill #2 \includesvg[height=1em]{#1}\hspace{1em}\null}
 }
@@ -17,7 +20,7 @@
 }
 \newcommand{\formationentry}[4]{%
 	\noindent \textbf{#1} \hfill
-	\colorbox{black}{%
+	\colorbox{\emcolor}{%
 		\parbox[c][1em]{8em}{%
 			\hfill \color{white} #2
 		}
@@ -28,7 +31,7 @@
 }
 \newcommand{\experienceentry}[4]{%
 	\noindent \textbf{#1} \hfill
-	\colorbox{black}{%
+	\colorbox{\emcolor}{%
 		\parbox[c][1em]{8em}{%
 			\hfill \color{white} #2
 		}
@@ -56,7 +59,7 @@
 \begin{minipage}[t]{\dimexpr0.25\textwidth}%
 \let\oldsection\section
 \let\oldsubsection\subsection
-\renewcommand{\section}[1]{\oldsection*{##1}}
+\renewcommand{\section}[1]{\oldsection*{\fgem ##1}}
 \renewcommand{\subsection}[1]{\oldsubsection*{\small ##1}\vspace{-0.5em}}
 \begin{center}%
 }{%5
@@ -69,7 +72,7 @@
 \noindent
 \begin{minipage}[t]{\dimexpr0.75\textwidth-1.5em}%
 \let\oldsection\section
-\renewcommand{\section}[1]{\oldsection*{\uppercase{##1}}\vspace{-0.5em}\hrule\vspace{1em}}
+\renewcommand{\section}[1]{\oldsection*{\uppercase{\fgem ##1}}\vspace{-0.5em}\hrule\vspace{1em}}
 }{%
 \let\section\oldsection
 \end{minipage}%
@@ -170,7 +173,7 @@
 \begin{itemize*}
 \item{crawlers}
 \item{cryptography}
-\item{linux \& open source $\varheartsuit$}
+\item{linux \& open source \color{red}$\varheartsuit$}
 \item{map reduce}
 \item{robotics}
 \item{static generators}
