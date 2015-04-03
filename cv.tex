@@ -71,7 +71,7 @@
 }
 \newenvironment{main}{%
 \noindent
-\begin{minipage}[t]{\dimexpr0.75\textwidth-1.5em}%
+\begin{minipage}[t]{\dimexpr0.75\textwidth-1.5em\relax}%
 \let\oldsection\section
 \renewcommand{\section}[1]{\oldsection*{\uppercase{\fgem ##1}}\vspace{-0.5em}\hrule\vspace{1em}}
 }{%
