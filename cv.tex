@@ -1,225 +1,43 @@
-\documentclass{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{color}
-\usepackage{helvet}
-\usepackage{hyperref}
-\usepackage[inline]{enumitem}
-\usepackage[a4paper,margin=2cm]{geometry}
-\usepackage{svg}
-\usepackage{txfonts}
+\documentclass[a4paper,sans]{moderncv}
+\usepackage{roboto}
 
-\def\emcolor{black}
-\newcommand{\fgem}{\color{\emcolor}}% foreground emphasis
-\newcommand{\vsep}{\noindent\fgem\hspace{0.75em}\vrule\hspace{0.75em}\normalcolor}
+\moderncvstyle{classic}
+\moderncvcolor{burgundy}
 
-\newcommand{\contactentry}[2]{%
-	\parbox{\textwidth}{\hfill #2 \includesvg[height=1em]{#1}\hspace{1em}\null}
-}
-\newcommand{\languageentry}[2]{%
-	\parbox{\textwidth}{\hfill \textbf{#1}\hspace{1em}#2\hspace{1em}\null}
-}
-\newcommand{\formationentry}[4]{%
-	\noindent \textbf{#1} \hfill
-	\colorbox{black}{%
-		\parbox[c][1em]{8em}{%
-			\hfill \color{white} #2
-		}
-	} \par
-	\noindent \textit{#3} \par
-	\normalsize
-	\vspace{.8em}
-}
-\newcommand{\experienceentry}[4]{%
-	\noindent \textbf{#1} \hfill
-	\colorbox{black}{%
-		\parbox[c][1em]{8em}{%
-			\hfill \color{white} #2
-		}
-	} \par
-	\noindent \textit{#3} \par
-	\noindent \hangindent=1.5em \hangafter=0 \small #4 \par
-	\normalsize
-	\vspace{.8em}
-}
-\newcommand{\skillentry}[2]{%
-	\noindent \textbf{#1} \hfill \par
-	\noindent \hangindent=1.5em \hangafter=0 \small #2 \par
-	\normalsize
-	\vspace{.8em}
-}
-\newcommand{\additionalentry}[2]{%
-	\noindent \textbf{#1} \par
-	\noindent \hangindent=1.5em \hangafter=0 \small #2 \par
-	\normalsize
-	\vspace{.8em}
-}
-
-\newenvironment{aside}{%
-\noindent
-\begin{minipage}[t]{\dimexpr0.25\textwidth}%
-\let\oldsection\section
-\let\oldsubsection\subsection
-\renewcommand{\section}[1]{\oldsection*{\fgem ##1}}
-\renewcommand{\subsection}[1]{\oldsubsection*{\small ##1}\vspace{-0.5em}}
-\begin{center}%
-}{%
-\end{center}%
-\let\subsection\oldsubsection
-\let\section\oldsection
-\end{minipage}%
-}
-\newenvironment{main}{%
-\noindent
-\begin{minipage}[t]{\dimexpr0.75\textwidth-1.5em\relax}%
-\let\oldsection\section
-\renewcommand{\section}[1]{\oldsection*{\uppercase{\fgem ##1}}\vspace{-0.5em}\hrule\vspace{1em}}
-}{%
-\let\section\oldsection
-\end{minipage}%
-}
-
-\renewcommand{\familydefault}{\sfdefault}
-\renewcommand{\normalcolor}{\color{white!10!black}}
+\name{Ranieri}{Althoff}
+\title{Computer scientist}
+\email{ranisalt@gmail.com}
+\social[github]{ranisalt}
+\social[linkedin]{ranisalt}
 
 \begin{document}
-\fontfamily{lmss} \selectfont
-
-\title{Ranieri Althoff -- Résumé}
-
-\hfill \Huge \textbf{R}anieri \textbf{A}lthoff
-\normalsize \par
-\vspace{\fill}
-\pagenumbering{gobble}
-
-\begin{aside}
-\section{Contact}
-\contactentry{location}{Florianopolis, SC}
-\contactentry{email}{\href{mailto:ranisalt+cv@gmail.com}{ranisalt@gmail.com}}
-\contactentry{github}{\href{https://github.com/ranisalt}{ranisalt}}
-\contactentry{twitter}{\href{https://twitter.com/ranisalt}{ranisalt}}
+\makecvtitle
 
 
-\section{Languages}
-\languageentry{Portuguese}{native}
-\languageentry{English}{fluent}
+\section{Education}
+\cventry{2013 -- 2018}{Bachelor in Computer Science}{Federal University of Santa Catarina}{Florianopolis -- Brazil}{}{}
+\cventry{2010 -- 2012}{Technician in Information Technology}{Federal Institute}{Camboriu -- Brazil}{}{}
+
+
+\section{Experience}
+
+\subsection{Vocational}
+\cventry{2017 -- now}{Software Engineer}{Doctype}{Stockholm -- Sweden}{}{Full stack software development, responsive modular front end with high performance back end, efficient algorithms.}
+\cventry{2015 -- 2016}{Software Engineer}{Khomp}{Florianopolis -- Brazil}{Internship}{Low and high level software development, hardware/software integration, resource tracking and allocation, real time scenarios.}
+\cventry{2015}{Programmer}{Computer Security Laboratory}{Florianopolis -- Brazil}{Scholarship}{Security library and software development, hashing and encryption algorithms, PKI with certification authorities.}
+
+\subsection{Volunteer}
+\cventry{2016 -- now}{Member}{Caravela Hackerclub}{Florianopolis -- Brazil}{}{Teaching computer science and programming to starters.}
 
 
 \section{Programming}
-\subsection{some thousand lines}
-\begin{itemize*}
-\item{C++}
-\item{Javascript}
-\item{Python}
-\item{Shell}
-\end{itemize*}
-
-\subsection{just a thousand lines}
-\begin{itemize*}
-\item{Lua}
-\item{PHP}
-\item{\LaTeX}
-\end{itemize*}
+\cvitem{Languages}{C++, Javascript, \LaTeX, Lua, Python, Shell}
+\cvitem{Technologies}{Docker, Git, HTML5, Linux, MongoDB, Redis}
 
 
-\section{Tools}
-\subsection{databases}
-\begin{itemize*}
-\item{MongoDB}
-\item{MySQL}
-\item{Redis}
-\item{SQLite}
-\end{itemize*}
-
-\subsection{frameworks}
-\begin{itemize*}
-\item{Flask}
-\item{Koa}
-\end{itemize*}
-
-\subsection{generators \& task runners}
-\begin{itemize*}
-\item{CMake}
-\end{itemize*}
-
-\subsection{version control}
-\begin{itemize*}
-\item{Git}
-\end{itemize*}
-
-\subsection{web servers}
-\begin{itemize*}
-\item{Nginx}
-\end{itemize*}
-
-\subsection{others}
-\begin{itemize*}
-\item{crawlers}
-\item{cryptography}
-\item{linux \& open source \color{red}$\varheartsuit$}
-\item{map reduce}
-\item{robotics}
-\end{itemize*}
+\section{Languages}
+\cvitem{Portuguese}{native}
+\cvitem{English}{fluent}
 
 
-\end{aside}%
-\vsep%
-\begin{main}%
-\section{Academic Formation}
-\formationentry{Bachelor in Computer Science}{2013 - now}{Federal University
-of Santa Catarina (UFSC)}
-
-\formationentry{Technician in Information Technology}{2010 - 2012}{Federal
-Catarinense Institute (IFC)}
-
-
-\section{Professional Experience}
-\experienceentry{Internship}{11/2015 - 11/2016}{Khomp}{Low and high level
-telecom software development and simulation, computer telephony integration,
-resource tracking, allocation algorithms, real time embedded systems.}
-
-\experienceentry{Scholarship}{5/2015 - 10/2015}{Computer Security Laboratory
-(LabSEC) at UFSC}{Development of security software, certification authorities,
-security libraries and wrappers, building automation infrastructure, package
-generation for Red Hat.}
-
-\experienceentry{Scholarship}{4/2014 - 4/2015}{Tutorial Education Program (PET)
-at UFSC}{Undergraduate research, office automation using microcontrollers,
-network and system administration, tutoring logic and programming for freshmen,
-academic extension.}
-
-\experienceentry{Internship}{6/2011 - 11/2012}{LabMat(i)\textsuperscript{2} at
-IFC}{Improve laboratory productivity, develop tools to supersed manual work,
-create new purposes for seized slot machines, scientific research at high
-school level.}
-
-
-\section{Skills and Interests}
-\skillentry{Python programming}{Development of web crawlers using frameworks
-for scraping, communication with microcontrollers for home/office automation,
-direct memory manipulation, process tracing.}
-
-\skillentry{Linux environment}{Shell (bash and fish) scripting, automation of
-routine tasks, usage of various distributions, system administration, software
-patching and packaging.}
-
-\skillentry{Database operation}{Relational databases, document-oriented
-databases, key-value storage, in-memory databases as application caches,
-map-reduce procedures.}
-
-\skillentry{Interested in}{Artificial intelligence, machine learning, neural
-networks, theory of choice, data mining, functional programming, cryptographic
-functions and systems. Knowledge is endless.}
-
-
-\section{Additional Information}
-\additionalentry{Participation in events}{SECCOM (UFSC) (2013, 2014, 2015,
-2016), PHP/SC Conference (2014), Front in Sampa (2014, 2015), Front in Floripa
-(2014), The Developer's Conference (2016), lots of dojos and meetups.}
-
-
-\textbf{For more information, please see \href{https://github.com/ranisalt}{GitHub profile}.}
-
-
-\end{main}%
 \end{document}
